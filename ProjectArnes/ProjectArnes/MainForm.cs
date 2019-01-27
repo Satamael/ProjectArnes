@@ -18,6 +18,18 @@ namespace ProjectArnes
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            GameplayForm gf = new GameplayForm();
+            gf.ShowDialog();
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void персонажToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }
