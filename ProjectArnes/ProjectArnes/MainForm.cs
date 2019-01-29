@@ -52,14 +52,13 @@ namespace ProjectArnes
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            GameplayForm gf = new GameplayForm();
-            gf.ShowDialog();
-
+           
         }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-
+            Registration r = new Registration();
+            r.ShowDialog();
         }
 
         private void персонажToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,6 +68,13 @@ namespace ProjectArnes
 
         private void panelBacked_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void приключенияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GameplayForm gf = new GameplayForm();
+            gf.ShowDialog();
 
         }
     }
