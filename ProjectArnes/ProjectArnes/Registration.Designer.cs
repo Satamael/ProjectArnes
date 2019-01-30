@@ -45,7 +45,7 @@
             // 
             this.textBoxLogin.Location = new System.Drawing.Point(159, 13);
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(132, 22);
+            this.textBoxLogin.Size = new System.Drawing.Size(154, 22);
             this.textBoxLogin.TabIndex = 0;
             this.textBoxLogin.WordWrap = false;
             // 
@@ -53,14 +53,14 @@
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(159, 51);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(132, 22);
+            this.textBoxPassword.Size = new System.Drawing.Size(154, 22);
             this.textBoxPassword.TabIndex = 1;
             // 
             // textBoxRePassword
             // 
             this.textBoxRePassword.Location = new System.Drawing.Point(159, 79);
             this.textBoxRePassword.Name = "textBoxRePassword";
-            this.textBoxRePassword.Size = new System.Drawing.Size(132, 22);
+            this.textBoxRePassword.Size = new System.Drawing.Size(154, 22);
             this.textBoxRePassword.TabIndex = 2;
             this.textBoxRePassword.TextChanged += new System.EventHandler(this.textBoxRePassword_TextChanged);
             // 
@@ -68,14 +68,14 @@
             // 
             this.textBoxEmail.Location = new System.Drawing.Point(159, 107);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(132, 22);
+            this.textBoxEmail.Size = new System.Drawing.Size(154, 22);
             this.textBoxEmail.TabIndex = 3;
             // 
             // textBoxPromo
             // 
             this.textBoxPromo.Location = new System.Drawing.Point(159, 148);
             this.textBoxPromo.Name = "textBoxPromo";
-            this.textBoxPromo.Size = new System.Drawing.Size(132, 22);
+            this.textBoxPromo.Size = new System.Drawing.Size(154, 22);
             this.textBoxPromo.TabIndex = 4;
             // 
             // labelLogin
@@ -127,9 +127,9 @@
             // 
             // buttonRegistrationEnd
             // 
-            this.buttonRegistrationEnd.Location = new System.Drawing.Point(79, 181);
+            this.buttonRegistrationEnd.Location = new System.Drawing.Point(68, 197);
             this.buttonRegistrationEnd.Name = "buttonRegistrationEnd";
-            this.buttonRegistrationEnd.Size = new System.Drawing.Size(165, 37);
+            this.buttonRegistrationEnd.Size = new System.Drawing.Size(187, 37);
             this.buttonRegistrationEnd.TabIndex = 6;
             this.buttonRegistrationEnd.Text = "Зарегистрироваться";
             this.buttonRegistrationEnd.UseVisualStyleBackColor = true;
@@ -138,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 230);
+            this.ClientSize = new System.Drawing.Size(332, 255);
             this.Controls.Add(this.buttonRegistrationEnd);
             this.Controls.Add(this.labelPromo);
             this.Controls.Add(this.labelEmail);

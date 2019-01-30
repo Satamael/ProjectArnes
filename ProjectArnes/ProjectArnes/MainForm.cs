@@ -25,16 +25,29 @@ namespace ProjectArnes
         int DMG;
     };
 
-    /*public struct character
+    public struct character
     {
         string name;
         int XP;
-                PictureBox pic;
-        int MPcost;
-        int SPcost;
-        int cooldown;
+        List<Image> picPortret;
+        int HP;
+        int MP;
+        int SP;
+        string classPers;
         int DMG;
-    };*/
+
+        public character(string str)
+        {
+            name = "";
+            XP = 0;
+            picPortret = new List<Image>();
+            HP = 50;
+            MP = 50;
+            SP = 3;
+            classPers="";
+            DMG = 0;
+        }
+    };
     public partial class MainForm : Form
     {
         public static List<skill> fire = new List<skill>();
@@ -76,6 +89,12 @@ namespace ProjectArnes
             GameplayForm gf = new GameplayForm();
             gf.ShowDialog();
 
+        }
+
+        private void входToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoginForm lf = new LoginForm();
+            lf.ShowDialog();
         }
     }
 }
