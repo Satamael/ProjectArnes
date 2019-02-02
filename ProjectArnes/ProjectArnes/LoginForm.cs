@@ -20,5 +20,11 @@ namespace ProjectArnes
         {
 
         }
+
+        private void buttonReg_Click(object sender, EventArgs e)
+        {
+            Registration reg = new Registration();
+            reg.ShowDialog();
+        }
     }
 }

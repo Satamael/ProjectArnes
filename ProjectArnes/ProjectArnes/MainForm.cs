@@ -10,44 +10,7 @@ using System.Windows.Forms;
 namespace ProjectArnes
 {
     
-    public struct skill
-    {
-        string name;
-        string tips;
-        string school;
-        string anim;
-        string picChar;
-        string picTarget;
-        PictureBox pic;
-        int MPcost;
-        int SPcost;
-        int cooldown;
-        int DMG;
-    };
-
-    public struct character
-    {
-        string name;
-        int XP;
-        List<Image> picPortret;
-        int HP;
-        int MP;
-        int SP;
-        string classPers;
-        int DMG;
-
-        public character(string str)
-        {
-            name = "";
-            XP = 0;
-            picPortret = new List<Image>();
-            HP = 50;
-            MP = 50;
-            SP = 3;
-            classPers="";
-            DMG = 0;
-        }
-    };
+   
     public partial class MainForm : Form
     {
         public static List<skill> fire = new List<skill>();

@@ -36,23 +36,26 @@
             // 
             // textBoxLoginInput
             // 
-            this.textBoxLoginInput.Location = new System.Drawing.Point(63, 69);
+            this.textBoxLoginInput.Location = new System.Drawing.Point(47, 56);
+            this.textBoxLoginInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLoginInput.Name = "textBoxLoginInput";
-            this.textBoxLoginInput.Size = new System.Drawing.Size(193, 22);
+            this.textBoxLoginInput.Size = new System.Drawing.Size(146, 20);
             this.textBoxLoginInput.TabIndex = 0;
             // 
             // textBoxPasswordInput
             // 
-            this.textBoxPasswordInput.Location = new System.Drawing.Point(63, 110);
+            this.textBoxPasswordInput.Location = new System.Drawing.Point(47, 89);
+            this.textBoxPasswordInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPasswordInput.Name = "textBoxPasswordInput";
-            this.textBoxPasswordInput.Size = new System.Drawing.Size(193, 22);
+            this.textBoxPasswordInput.Size = new System.Drawing.Size(146, 20);
             this.textBoxPasswordInput.TabIndex = 0;
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(181, 138);
+            this.buttonLogin.Location = new System.Drawing.Point(136, 112);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(75, 29);
+            this.buttonLogin.Size = new System.Drawing.Size(56, 24);
             this.buttonLogin.TabIndex = 1;
             this.buttonLogin.Text = "Войти";
             this.buttonLogin.UseVisualStyleBackColor = true;
@@ -60,23 +63,26 @@
             // 
             // buttonReg
             // 
-            this.buttonReg.Location = new System.Drawing.Point(63, 138);
+            this.buttonReg.Location = new System.Drawing.Point(47, 112);
+            this.buttonReg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonReg.Name = "buttonReg";
-            this.buttonReg.Size = new System.Drawing.Size(110, 29);
+            this.buttonReg.Size = new System.Drawing.Size(82, 24);
             this.buttonReg.TabIndex = 1;
             this.buttonReg.Text = "Регистрация";
             this.buttonReg.UseVisualStyleBackColor = true;
+            this.buttonReg.Click += new System.EventHandler(this.buttonReg_Click);
             // 
-            // Login
+            // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 255);
+            this.ClientSize = new System.Drawing.Size(249, 207);
             this.Controls.Add(this.buttonReg);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPasswordInput);
             this.Controls.Add(this.textBoxLoginInput);
-            this.Name = "Login";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "LoginForm";
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
