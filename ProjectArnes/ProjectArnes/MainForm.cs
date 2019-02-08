@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -28,8 +29,14 @@ namespace ProjectArnes
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
-        }
+
+
+           /* File.WriteAllText("1.csv", "Логин;Пароль" + Environment.NewLine);
+            File.AppendAllText("1.csv", "2q342134;235243534" + Environment.NewLine);
+            File.AppendAllText("1.csv", "2q342134;235243534" + Environment.NewLine);
+            File.AppendAllText("1.csv", "2q342134;235243534" + Environment.NewLine);
+            File.AppendAllText("1.csv", "2q342134;235243534" + Environment.NewLine);
+        */}
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -58,6 +65,12 @@ namespace ProjectArnes
         {
             LoginForm lf = new LoginForm();
             lf.ShowDialog();
+        }
+
+        private void saddaaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormChars fc = new FormChars();
+            fc.ShowDialog();
         }
     }
 }

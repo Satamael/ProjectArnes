@@ -43,48 +43,54 @@
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(159, 13);
+            this.textBoxLogin.Location = new System.Drawing.Point(119, 11);
+            this.textBoxLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(154, 22);
+            this.textBoxLogin.Size = new System.Drawing.Size(116, 20);
             this.textBoxLogin.TabIndex = 0;
             this.textBoxLogin.WordWrap = false;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(159, 51);
+            this.textBoxPassword.Location = new System.Drawing.Point(119, 41);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(154, 22);
+            this.textBoxPassword.Size = new System.Drawing.Size(116, 20);
             this.textBoxPassword.TabIndex = 1;
             // 
             // textBoxRePassword
             // 
-            this.textBoxRePassword.Location = new System.Drawing.Point(159, 79);
+            this.textBoxRePassword.Location = new System.Drawing.Point(119, 64);
+            this.textBoxRePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxRePassword.Name = "textBoxRePassword";
-            this.textBoxRePassword.Size = new System.Drawing.Size(154, 22);
+            this.textBoxRePassword.Size = new System.Drawing.Size(116, 20);
             this.textBoxRePassword.TabIndex = 2;
             this.textBoxRePassword.TextChanged += new System.EventHandler(this.textBoxRePassword_TextChanged);
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(159, 107);
+            this.textBoxEmail.Location = new System.Drawing.Point(119, 87);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(154, 22);
+            this.textBoxEmail.Size = new System.Drawing.Size(116, 20);
             this.textBoxEmail.TabIndex = 3;
             // 
             // textBoxPromo
             // 
-            this.textBoxPromo.Location = new System.Drawing.Point(159, 148);
+            this.textBoxPromo.Location = new System.Drawing.Point(119, 120);
+            this.textBoxPromo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPromo.Name = "textBoxPromo";
-            this.textBoxPromo.Size = new System.Drawing.Size(154, 22);
+            this.textBoxPromo.Size = new System.Drawing.Size(116, 20);
             this.textBoxPromo.TabIndex = 4;
             // 
             // labelLogin
             // 
             this.labelLogin.AccessibleDescription = "";
             this.labelLogin.AutoSize = true;
-            this.labelLogin.Location = new System.Drawing.Point(12, 18);
+            this.labelLogin.Location = new System.Drawing.Point(9, 15);
+            this.labelLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(47, 17);
+            this.labelLogin.Size = new System.Drawing.Size(38, 13);
             this.labelLogin.TabIndex = 5;
             this.labelLogin.Text = "Логин";
             this.labelLogin.Click += new System.EventHandler(this.label1_Click);
@@ -92,53 +98,59 @@
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(12, 56);
+            this.labelPassword.Location = new System.Drawing.Point(9, 46);
+            this.labelPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(57, 17);
+            this.labelPassword.Size = new System.Drawing.Size(45, 13);
             this.labelPassword.TabIndex = 5;
             this.labelPassword.Text = "Пароль";
             // 
             // labelRePassword
             // 
             this.labelRePassword.AutoSize = true;
-            this.labelRePassword.Location = new System.Drawing.Point(12, 84);
+            this.labelRePassword.Location = new System.Drawing.Point(9, 68);
+            this.labelRePassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRePassword.Name = "labelRePassword";
-            this.labelRePassword.Size = new System.Drawing.Size(130, 17);
+            this.labelRePassword.Size = new System.Drawing.Size(100, 13);
             this.labelRePassword.TabIndex = 5;
             this.labelRePassword.Text = "Повторите пароль";
             // 
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(12, 112);
+            this.labelEmail.Location = new System.Drawing.Point(9, 91);
+            this.labelEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(42, 17);
+            this.labelEmail.Size = new System.Drawing.Size(32, 13);
             this.labelEmail.TabIndex = 5;
             this.labelEmail.Text = "Email";
             // 
             // labelPromo
             // 
             this.labelPromo.AutoSize = true;
-            this.labelPromo.Location = new System.Drawing.Point(12, 153);
+            this.labelPromo.Location = new System.Drawing.Point(9, 124);
+            this.labelPromo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPromo.Name = "labelPromo";
-            this.labelPromo.Size = new System.Drawing.Size(74, 17);
+            this.labelPromo.Size = new System.Drawing.Size(59, 13);
             this.labelPromo.TabIndex = 5;
             this.labelPromo.Text = "Промокод";
             // 
             // buttonRegistrationEnd
             // 
-            this.buttonRegistrationEnd.Location = new System.Drawing.Point(68, 197);
+            this.buttonRegistrationEnd.Location = new System.Drawing.Point(51, 160);
+            this.buttonRegistrationEnd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonRegistrationEnd.Name = "buttonRegistrationEnd";
-            this.buttonRegistrationEnd.Size = new System.Drawing.Size(187, 37);
+            this.buttonRegistrationEnd.Size = new System.Drawing.Size(140, 30);
             this.buttonRegistrationEnd.TabIndex = 6;
             this.buttonRegistrationEnd.Text = "Зарегистрироваться";
             this.buttonRegistrationEnd.UseVisualStyleBackColor = true;
+            this.buttonRegistrationEnd.Click += new System.EventHandler(this.buttonRegistrationEnd_Click);
             // 
             // Registration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 255);
+            this.ClientSize = new System.Drawing.Size(249, 207);
             this.Controls.Add(this.buttonRegistrationEnd);
             this.Controls.Add(this.labelPromo);
             this.Controls.Add(this.labelEmail);
@@ -150,6 +162,7 @@
             this.Controls.Add(this.textBoxRePassword);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxLogin);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Registration";
             this.Text = "Registration";
             this.ResumeLayout(false);

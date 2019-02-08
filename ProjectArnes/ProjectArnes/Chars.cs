@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace ProjectArnes
 {
-    public partial class Chars : Form
+    public partial class FormChars : Form
     {
-        public Chars()
+        public FormChars()
         {
             InitializeComponent();
         }

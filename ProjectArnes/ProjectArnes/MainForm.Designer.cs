@@ -93,6 +93,7 @@
             this.saddaaToolStripMenuItem.Name = "saddaaToolStripMenuItem";
             this.saddaaToolStripMenuItem.Size = new System.Drawing.Size(91, 19);
             this.saddaaToolStripMenuItem.Text = "Персонаж";
+            this.saddaaToolStripMenuItem.Click += new System.EventHandler(this.saddaaToolStripMenuItem_Click);
             // 
             // картаToolStripMenuItem
             // 

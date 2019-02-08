@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace ProjectArnes
 {
     public partial class Registration : Form
@@ -18,12 +19,20 @@ namespace ProjectArnes
 
         private void textBoxRePassword_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonRegistrationEnd_Click(object sender, EventArgs e)
+        {
+            if (textBoxPassword.Text == textBoxRePassword.Text)
+            {
+               
+                System.IO.File.AppendAllText("TableOne.csv", Environment.NewLine + textBoxLogin.Text + ';' + textBoxPassword.Text + ';' + textBoxEmail.Text + ';' + textBoxPromo.Text + ';');
+            }
         }
     }
 }
