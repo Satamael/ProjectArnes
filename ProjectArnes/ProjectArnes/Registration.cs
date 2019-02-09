@@ -32,6 +32,11 @@ namespace ProjectArnes
             {
                
                 System.IO.File.AppendAllText("TableOne.csv", Environment.NewLine + textBoxLogin.Text + ';' + textBoxPassword.Text + ';' + textBoxEmail.Text + ';' + textBoxPromo.Text + ';');
+                CreateCharacterForm ccf = new CreateCharacterForm();
+                this.Close();
+                ccf.ShowDialog();
+                
+
             }
         }
     }

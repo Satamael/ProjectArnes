@@ -125,7 +125,7 @@
             // 
             // progressBarHP
             // 
-            this.progressBarHP.Location = new System.Drawing.Point(109, 38);
+            this.progressBarHP.Location = new System.Drawing.Point(109, 28);
             this.progressBarHP.Name = "progressBarHP";
             this.progressBarHP.Size = new System.Drawing.Size(113, 23);
             this.progressBarHP.TabIndex = 3;
@@ -169,7 +169,7 @@
             this.tabPage1.Controls.Add(this.textBox3);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(199, 111);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Подсказки";
@@ -189,7 +189,7 @@
             this.tabPage2.Controls.Add(this.textBox4);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(199, 111);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Журнал боя";
@@ -211,7 +211,7 @@
             this.tabPage3.Controls.Add(this.textBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(199, 111);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Чат";
