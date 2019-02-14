@@ -30,7 +30,7 @@ namespace ProjectArnes
         private void Form1_Load(object sender, EventArgs e)
         {
 
-
+            LabelThisLogined.Text = "Добро пожаловать " + Configs.ThisUser;
            /* File.WriteAllText("1.csv", "Логин;Пароль" + Environment.NewLine);
             File.AppendAllText("1.csv", "2q342134;235243534" + Environment.NewLine);
             File.AppendAllText("1.csv", "2q342134;235243534" + Environment.NewLine);
@@ -71,6 +71,11 @@ namespace ProjectArnes
         {
             FormChars fc = new FormChars();
             fc.ShowDialog();
+        }
+
+        private void LabelThisLogined_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -18,7 +18,20 @@ namespace ProjectArnes
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Configs.UsersData.AddRange(System.IO.File.ReadAllLines("TableOne.csv"));
+            foreach (string Line in Configs.UsersData)
+            {
 
+                if (Line.StartsWith(textBoxLoginInput.Text + ';' + textBoxPasswordInput + ';'))
+                {
+                    Configs.ThisUser = textBoxLoginInput.Text;
+                } 
+            }
+            
+                /*if (textBoxLoginInput ==)
+            {
+
+            }*/
         }
 
         private void buttonReg_Click(object sender, EventArgs e)
