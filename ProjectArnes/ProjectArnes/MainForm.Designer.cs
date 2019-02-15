@@ -268,7 +268,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelBacked.ResumeLayout(false);
             this.panelBacked.PerformLayout();
             this.menuStripVirtical.ResumeLayout(false);

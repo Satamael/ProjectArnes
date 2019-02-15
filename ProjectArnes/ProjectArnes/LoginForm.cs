@@ -18,20 +18,20 @@ namespace ProjectArnes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Configs.UsersData.AddRange(System.IO.File.ReadAllLines("TableOne.csv"));
+            Configs.UsersData= System.IO.File.ReadAllLines("TableOne.csv").ToList();
             foreach (string Line in Configs.UsersData)
             {
-
-                if (Line.StartsWith(textBoxLoginInput.Text + ';' + textBoxPasswordInput + ';'))
+                //if (Line.StartsWith(textBoxLoginInput.Text+';'+textBoxPasswordInput+';'))
+                if(Line == textBoxLoginInput.Text + ';' + textBoxPasswordInput + ';')
                 {
                     Configs.ThisUser = textBoxLoginInput.Text;
-                } 
+
+                    this.Close();
+                }
+                else { MessageBox.Show("Введён бред, протри глаза");}
             }
             
-                /*if (textBoxLoginInput ==)
-            {
-
-            }*/
+           
         }
 
         private void buttonReg_Click(object sender, EventArgs e)

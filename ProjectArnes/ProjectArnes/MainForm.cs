@@ -27,7 +27,7 @@ namespace ProjectArnes
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
             LabelThisLogined.Text = "Добро пожаловать " + Configs.ThisUser;
@@ -42,6 +42,7 @@ namespace ProjectArnes
         {
             Registration r = new Registration();
             r.ShowDialog();
+            MainForm_Load(sender, e);
         }
 
         private void персонажToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,12 +66,14 @@ namespace ProjectArnes
         {
             LoginForm lf = new LoginForm();
             lf.ShowDialog();
+            MainForm_Load(sender, e);
         }
 
         private void saddaaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormChars fc = new FormChars();
             fc.ShowDialog();
+            MainForm_Load(sender, e);
         }
 
         private void LabelThisLogined_Click(object sender, EventArgs e)
