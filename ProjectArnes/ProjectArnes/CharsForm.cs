@@ -15,5 +15,12 @@ namespace ProjectArnes
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CreateCharacterForm c = new CreateCharacterForm();
+            c.ShowDialog();
+
+        }
     }
 }

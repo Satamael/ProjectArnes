@@ -11,7 +11,7 @@ namespace ProjectArnes
         public static string ThisUserEmail;
         public static string ThisUserPromo;
         public static string ThisUserPassword;
-        public static string ThisCharacter;
+        public static character ThisCharacter;
         public static List<string> UsersData;
     }
  

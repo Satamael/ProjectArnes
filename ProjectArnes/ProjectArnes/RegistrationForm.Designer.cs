@@ -1,6 +1,6 @@
 ﻿namespace ProjectArnes
 {
-    partial class Registration
+    partial class RegistrationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,7 @@
             // textBoxLogin
             // 
             this.textBoxLogin.Location = new System.Drawing.Point(119, 11);
-            this.textBoxLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxLogin.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(116, 20);
             this.textBoxLogin.TabIndex = 0;
@@ -53,7 +53,7 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(119, 41);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(116, 20);
             this.textBoxPassword.TabIndex = 1;
@@ -61,7 +61,7 @@
             // textBoxRePassword
             // 
             this.textBoxRePassword.Location = new System.Drawing.Point(119, 64);
-            this.textBoxRePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxRePassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxRePassword.Name = "textBoxRePassword";
             this.textBoxRePassword.Size = new System.Drawing.Size(116, 20);
             this.textBoxRePassword.TabIndex = 2;
@@ -70,7 +70,7 @@
             // textBoxEmail
             // 
             this.textBoxEmail.Location = new System.Drawing.Point(119, 87);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(116, 20);
             this.textBoxEmail.TabIndex = 3;
@@ -78,7 +78,7 @@
             // textBoxPromo
             // 
             this.textBoxPromo.Location = new System.Drawing.Point(119, 120);
-            this.textBoxPromo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPromo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPromo.Name = "textBoxPromo";
             this.textBoxPromo.Size = new System.Drawing.Size(116, 20);
             this.textBoxPromo.TabIndex = 4;
@@ -138,7 +138,7 @@
             // buttonRegistrationEnd
             // 
             this.buttonRegistrationEnd.Location = new System.Drawing.Point(51, 160);
-            this.buttonRegistrationEnd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonRegistrationEnd.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRegistrationEnd.Name = "buttonRegistrationEnd";
             this.buttonRegistrationEnd.Size = new System.Drawing.Size(140, 30);
             this.buttonRegistrationEnd.TabIndex = 6;
@@ -146,7 +146,7 @@
             this.buttonRegistrationEnd.UseVisualStyleBackColor = true;
             this.buttonRegistrationEnd.Click += new System.EventHandler(this.buttonRegistrationEnd_Click);
             // 
-            // Registration
+            // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -162,9 +162,9 @@
             this.Controls.Add(this.textBoxRePassword);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxLogin);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Registration";
-            this.Text = "Registration";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "RegistrationForm";
+            this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
 

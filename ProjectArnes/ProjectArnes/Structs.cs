@@ -46,9 +46,12 @@ namespace ProjectArnes
         List<Image> picPortret;
         int HP;
         int MP;
+        int CP;
         int SP;
+        int DexP;
         string classPers;
         int DMG;
+        int Coins;
 
         public character(string str)
         {
@@ -56,11 +59,23 @@ namespace ProjectArnes
             fraction = "";
             XP = 0;
             picPortret = new List<Image>();
-            HP = 50;
-            MP = 50;
+            HP = 25;
+            MP = 25;
+            DexP = 25;
+            CP = 25;
             SP = 3;
             classPers = "";
-            DMG = 0;
+            DMG = 5;
+            Coins = 100;
         }
     };
+   
+    public struct user
+    {
+        public string name;
+        public string password;
+        public string promo;
+        public int donatCoins;
+        public List<character> Chars;
+    }
 }

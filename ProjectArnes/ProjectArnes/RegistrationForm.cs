@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectArnes
 {
-    public partial class Registration : Form
+    public partial class RegistrationForm : Form
     {
-        public Registration()
+        public RegistrationForm()
         {
             InitializeComponent();
         }
@@ -28,7 +28,9 @@ namespace ProjectArnes
 
         private void buttonRegistrationEnd_Click(object sender, EventArgs e)
         {
-            if (textBoxPassword.Text == textBoxRePassword.Text)
+            if (textBoxPassword.Text == textBoxRePassword.Text &&
+                textBoxLogin.Text != "" &&
+                textBoxPassword.Text != "")
             {
                
                 System.IO.File.AppendAllText("TableOne.csv", Environment.NewLine + textBoxLogin.Text + ';' + textBoxPassword.Text + ';' + textBoxEmail.Text + ';' + textBoxPromo.Text + ';');
