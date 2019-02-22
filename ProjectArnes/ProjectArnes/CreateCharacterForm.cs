@@ -93,5 +93,46 @@ namespace ProjectArnes
 
 
         }
+
+        private bool _moving;
+        private Point _startLocation;
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            int r = 25;
+            _moving = true;
+            _startLocation = e.Location;
+            s = (pictureBoxPoint.Location.X + r) / 4;
+            c = 50 - ((pictureBoxPoint.Location.X + r) / 4);
+            d = (pictureBoxPoint.Location.Y + r) / 4;
+            m = 50 - ((pictureBoxPoint.Location.Y + r) / 4);
+            labelHP.Text = "Сила " + s.ToString();
+            labelСharakter.Text = "Харизма " + c.ToString();
+            labelDex.Text = "Ловкость " + d.ToString();
+            labelMagic.Text = "Магия " + m.ToString();
+        }
+
+        private void pictureBoxPoint_MouseUp(object sender, MouseEventArgs e)
+        {
+            _moving = false;
+        }
+
+        private void pictureBoxPoint_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_moving)
+            {
+                int r = 25;
+                pictureBoxPoint.Left += e.Location.X - _startLocation.X;
+                pictureBoxPoint.Top += e.Location.Y - _startLocation.Y;
+                s = (pictureBoxPoint.Location.X + r) / 4;
+                c = 50 - ((pictureBoxPoint.Location.X + r) / 4);
+                d = (pictureBoxPoint.Location.Y + r) / 4;
+                m = 50 - ((pictureBoxPoint.Location.Y + r) / 4);
+                labelHP.Text = "Сила " + s.ToString();
+                labelСharakter.Text = "Харизма " + c.ToString();
+                labelDex.Text = "Ловкость " + d.ToString();
+                labelMagic.Text = "Магия " + m.ToString();
+            }
+        }
     }
 }
