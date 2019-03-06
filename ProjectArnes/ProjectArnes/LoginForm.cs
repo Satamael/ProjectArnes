@@ -25,6 +25,11 @@ namespace ProjectArnes
             Configs.UsersData= System.IO.File.ReadAllLines("TableOne.csv").ToList();
             foreach (string Line in Configs.UsersData)
             {
+                if (Line == Configs.UsersData[0])
+                {
+                    continue;
+                }
+
                 string[] words = Line.Split(new char[] { ';' });
 
                 user u1 = new user();
@@ -32,13 +37,15 @@ namespace ProjectArnes
 
                 usery.Add(u1);
 
-                String str = textBoxLoginInput.Text + ";" + textBoxPasswordInput.Text + ";";
-                String str2 = textBoxLoginInput.Text + ';' + textBoxPasswordInput.Text + ';'; 
-                if (Line.StartsWith(str))
-                //if(Line == textBoxLoginInput.Text + ';' + textBoxPasswordInput + ';')
+                if (words[0] == textBoxLoginInput.Text &&
+                    words[1] == textBoxPasswordInput.Text)
                 {
-                    Configs.ThisUser = textBoxLoginInput.Text;
-
+                    Configs.ThisUser.name = words[0];
+                    Configs.ThisUser.password = words[1]; //ДОПИЛИ СУКА
+                    Configs.ThisUser.email = words[2];
+                    Configs.ThisUser.promo = words[3];
+                    Configs.logined = true;
+                    
                     this.Close();
                     return;
                 }
@@ -51,6 +58,11 @@ namespace ProjectArnes
         {
             RegistrationForm reg = new RegistrationForm();
             reg.ShowDialog();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

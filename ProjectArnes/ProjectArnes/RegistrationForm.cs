@@ -32,8 +32,18 @@ namespace ProjectArnes
                 textBoxLogin.Text != "" &&
                 textBoxPassword.Text != "")
             {
+                Configs.ThisUser.name = textBoxLogin.Text;
+                Configs.ThisUser.password = textBoxPassword.Text;
+                Configs.ThisUser.email = textBoxEmail.Text;
+                Configs.ThisUser.promo = textBoxPromo.Text;
+                Configs.ThisUser.donatCoins = 10;
+                
+                System.IO.File.AppendAllText("TableOne.csv", Environment.NewLine + Configs.ThisUser.name +
+                    ';' + Configs.ThisUser.password +
+                     ';' + Configs.ThisUser.email + 
+                     ';' + Configs.ThisUser.promo +
+                     ';' + Configs.ThisUser.donatCoins + ';');
                
-                System.IO.File.AppendAllText("TableOne.csv", Environment.NewLine + textBoxLogin.Text + ';' + textBoxPassword.Text + ';' + textBoxEmail.Text + ';' + textBoxPromo.Text + ';');
                 CreateCharacterForm ccf = new CreateCharacterForm();
                 this.Close();
                 ccf.ShowDialog();

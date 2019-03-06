@@ -29,9 +29,27 @@ namespace ProjectArnes
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            if (Configs.logined == true)
+            {
+                LabelThisLogined.Text = "Добро пожаловать, " + Configs.ThisUser.name;
+                menuStripVirtical.Visible = true;
 
-            LabelThisLogined.Text = "Добро пожаловать " + Configs.ThisUser;
-           }
+            }
+            else { 
+                LabelThisLogined.Text = "Добро пожаловать, Гость";
+                /*UnloginToolStripMenuItem.Visible = false;
+                CharsToolStripMenuItem.Visible = false;
+                AchivToolStripMenuItem.Visible = false;
+                QestsToolStripMenuItem.Visible = false;
+                EventsToolStripMenuItem.Visible = false;
+                MultiplayerToolStripMenuItem.Visible = false;
+                SingleToolStripMenuItem.Visible = false;
+                */
+                menuStripVirtical.Visible = false;
+
+
+            }
+        }
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -72,6 +90,11 @@ namespace ProjectArnes
         }
 
         private void LabelThisLogined_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

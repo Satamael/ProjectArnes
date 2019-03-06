@@ -76,8 +76,6 @@ namespace ProjectArnes
 
         private void pictureBoxPoint_DragEnter(object sender, DragEventArgs e)
         {
-
-
             pictureBoxPoint.AllowDrop = true;
             int r = 25;
             pictureBoxPoint.Location = Cursor.Position;
@@ -89,9 +87,6 @@ namespace ProjectArnes
             labelСharakter.Text = "Харизма " + c.ToString();
             labelDex.Text = "Ловкость " + d.ToString();
             labelMagic.Text = "Магия " + m.ToString();
-
-
-
         }
 
         private bool _moving;
@@ -124,6 +119,22 @@ namespace ProjectArnes
                 int r = 25;
                 pictureBoxPoint.Left += e.Location.X - _startLocation.X;
                 pictureBoxPoint.Top += e.Location.Y - _startLocation.Y;
+                if (pictureBoxPoint.Location.X < 0)
+                {
+                    pictureBoxPoint.Location = new Point(0, pictureBoxPoint.Location.Y);
+                }
+                else if (pictureBoxPoint.Location.X > panelChoose.Size.Width - 10)
+                {
+                    pictureBoxPoint.Location = new Point(panelChoose.Size.Width - 10, pictureBoxPoint.Location.Y);
+                }
+                if (pictureBoxPoint.Location.Y < 0)
+                {
+                    pictureBoxPoint.Location = new Point(pictureBoxPoint.Location.X, 0);
+                }
+                else if (pictureBoxPoint.Location.Y > panelChoose.Size.Height - 10)
+                {
+                    pictureBoxPoint.Location = new Point(pictureBoxPoint.Location.X, panelChoose.Size.Height - 10);
+                }
                 s = (pictureBoxPoint.Location.X + r) / 4;
                 c = 50 - ((pictureBoxPoint.Location.X + r) / 4);
                 d = (pictureBoxPoint.Location.Y + r) / 4;
@@ -133,6 +144,48 @@ namespace ProjectArnes
                 labelDex.Text = "Ловкость " + d.ToString();
                 labelMagic.Text = "Магия " + m.ToString();
             }
+        }
+
+        private void pictureBoxPoint_DragDrop(object sender, DragEventArgs e)
+        {
+        }
+
+        private void buttonCreate_Click(object sender, EventArgs e)
+        {
+            String DannyeOPersonage = "{";
+            DannyeOPersonage += "Name = '" + textBoxName.Text + "'";
+            if (radioButtonMale.Checked)
+            {
+                DannyeOPersonage += ", Gender = mujik";
+            }
+            else
+            {
+                DannyeOPersonage += ", Gender = telka";
+            }
+
+            if (radioButtonArnes.Checked)
+            {
+                DannyeOPersonage += ", Motherboard = Arnes";
+            }
+            else if (radioButtonFaro.Checked)
+            {
+                DannyeOPersonage += ", Motherboard = Faro";
+            }
+            else if (radioButtonVesk.Checked)
+            {
+                DannyeOPersonage += ", Matherboard = Vesk";
+            }
+            DannyeOPersonage += ", Talants[";
+            foreach (String item in checkedListBoxCharClass.CheckedItems)
+            {
+                DannyeOPersonage += item+ ",";
+            }
+            DannyeOPersonage += "]";
+            DannyeOPersonage += ", Str=" + s.ToString() + ", Magic=" + m.ToString() + ", Dex=" + d.ToString() + ", Charakter=" + d.ToString(); 
+
+            MessageBox.Show(DannyeOPersonage + "}");
+
+
         }
     }
 }

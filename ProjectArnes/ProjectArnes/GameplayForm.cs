@@ -50,5 +50,10 @@ namespace ProjectArnes
             progressBarEmemyHP.Location = new Point(this.Width * (2 / 3), progressBarEmemyHP.Location.Y);
             progressBarEmemyHP.Size = new Size(this.Width / 3 - 20, 30);
         }
+
+        private void GameplayForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

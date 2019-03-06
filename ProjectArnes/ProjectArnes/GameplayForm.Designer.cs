@@ -252,6 +252,7 @@
             this.Controls.Add(this.PanelBackgraund);
             this.Name = "GameplayForm";
             this.Text = "GameplayForm";
+            this.Load += new System.EventHandler(this.GameplayForm_Load);
             this.Resize += new System.EventHandler(this.GameplayForm_Resize);
             this.PanelBackgraund.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

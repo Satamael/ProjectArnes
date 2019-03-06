@@ -75,6 +75,7 @@ namespace ProjectArnes
         public string name;
         public string password;
         public string promo;
+        public string email;
         public int donatCoins;
         public List<character> Chars;
     }

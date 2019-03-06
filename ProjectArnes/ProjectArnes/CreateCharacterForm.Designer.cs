@@ -67,13 +67,13 @@
             // buttonCreate
             // 
             this.buttonCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCreate.Location = new System.Drawing.Point(359, 668);
-            this.buttonCreate.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCreate.Location = new System.Drawing.Point(269, 543);
             this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(100, 28);
+            this.buttonCreate.Size = new System.Drawing.Size(75, 23);
             this.buttonCreate.TabIndex = 4;
             this.buttonCreate.Text = "Создать";
             this.buttonCreate.UseVisualStyleBackColor = true;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
             // fileSystemWatcher1
             // 
@@ -85,15 +85,14 @@
             this.pictureBoxPoint.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxPoint.BackgroundImage = global::ProjectArnes.Properties.Resources.Choose;
             this.pictureBoxPoint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxPoint.Location = new System.Drawing.Point(100, 100);
-            this.pictureBoxPoint.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxPoint.Location = new System.Drawing.Point(75, 81);
             this.pictureBoxPoint.Name = "pictureBoxPoint";
-            this.pictureBoxPoint.Size = new System.Drawing.Size(25, 25);
+            this.pictureBoxPoint.Size = new System.Drawing.Size(19, 20);
             this.pictureBoxPoint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxPoint.TabIndex = 6;
             this.pictureBoxPoint.TabStop = false;
             this.pictureBoxPoint.Click += new System.EventHandler(this.pictureBoxPoint_Click);
-            this.pictureBoxPoint.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBoxPoint_DragEnter);
+            this.pictureBoxPoint.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBoxPoint_DragDrop);
             this.pictureBoxPoint.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBoxPoint_DragEnter);
             this.pictureBoxPoint.DragOver += new System.Windows.Forms.DragEventHandler(this.pictureBoxPoint_DragEnter);
             this.pictureBoxPoint.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
@@ -103,50 +102,45 @@
             // labelHP
             // 
             this.labelHP.AutoSize = true;
-            this.labelHP.Location = new System.Drawing.Point(285, 393);
-            this.labelHP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelHP.Location = new System.Drawing.Point(214, 319);
             this.labelHP.Name = "labelHP";
-            this.labelHP.Size = new System.Drawing.Size(41, 17);
+            this.labelHP.Size = new System.Drawing.Size(32, 13);
             this.labelHP.TabIndex = 7;
             this.labelHP.Text = "Сила";
             // 
             // labelСharakter
             // 
             this.labelСharakter.AutoSize = true;
-            this.labelСharakter.Location = new System.Drawing.Point(285, 500);
-            this.labelСharakter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelСharakter.Location = new System.Drawing.Point(214, 406);
             this.labelСharakter.Name = "labelСharakter";
-            this.labelСharakter.Size = new System.Drawing.Size(65, 17);
+            this.labelСharakter.Size = new System.Drawing.Size(52, 13);
             this.labelСharakter.TabIndex = 7;
             this.labelСharakter.Text = "Харизма";
             // 
             // labelMagic
             // 
             this.labelMagic.AutoSize = true;
-            this.labelMagic.Location = new System.Drawing.Point(285, 425);
-            this.labelMagic.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMagic.Location = new System.Drawing.Point(214, 345);
             this.labelMagic.Name = "labelMagic";
-            this.labelMagic.Size = new System.Drawing.Size(48, 17);
+            this.labelMagic.Size = new System.Drawing.Size(39, 13);
             this.labelMagic.TabIndex = 7;
             this.labelMagic.Text = "Магия";
             // 
             // labelDex
             // 
             this.labelDex.AutoSize = true;
-            this.labelDex.Location = new System.Drawing.Point(285, 462);
-            this.labelDex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDex.Location = new System.Drawing.Point(214, 375);
             this.labelDex.Name = "labelDex";
-            this.labelDex.Size = new System.Drawing.Size(69, 17);
+            this.labelDex.Size = new System.Drawing.Size(56, 13);
             this.labelDex.TabIndex = 7;
             this.labelDex.Text = "Ловкость";
             // 
             // radioButtonMale
             // 
             this.radioButtonMale.AutoSize = true;
-            this.radioButtonMale.Location = new System.Drawing.Point(44, 62);
-            this.radioButtonMale.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonMale.Location = new System.Drawing.Point(33, 50);
             this.radioButtonMale.Name = "radioButtonMale";
-            this.radioButtonMale.Size = new System.Drawing.Size(86, 21);
+            this.radioButtonMale.Size = new System.Drawing.Size(71, 17);
             this.radioButtonMale.TabIndex = 11;
             this.radioButtonMale.TabStop = true;
             this.radioButtonMale.Text = "Мужской";
@@ -155,10 +149,9 @@
             // radioButtonFamale
             // 
             this.radioButtonFamale.AutoSize = true;
-            this.radioButtonFamale.Location = new System.Drawing.Point(156, 62);
-            this.radioButtonFamale.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonFamale.Location = new System.Drawing.Point(117, 50);
             this.radioButtonFamale.Name = "radioButtonFamale";
-            this.radioButtonFamale.Size = new System.Drawing.Size(88, 21);
+            this.radioButtonFamale.Size = new System.Drawing.Size(72, 17);
             this.radioButtonFamale.TabIndex = 11;
             this.radioButtonFamale.TabStop = true;
             this.radioButtonFamale.Text = "Женский";
@@ -166,10 +159,9 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(40, 27);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxName.Location = new System.Drawing.Point(30, 22);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(211, 22);
+            this.textBoxName.Size = new System.Drawing.Size(159, 20);
             this.textBoxName.TabIndex = 12;
             // 
             // panel1
@@ -182,35 +174,35 @@
             this.panel1.Controls.Add(this.buttonAva);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(475, 108);
+            this.panel1.Size = new System.Drawing.Size(356, 88);
             this.panel1.TabIndex = 13;
             // 
             // LabelName
             // 
             this.LabelName.AutoSize = true;
-            this.LabelName.Location = new System.Drawing.Point(3, 27);
+            this.LabelName.Location = new System.Drawing.Point(2, 22);
+            this.LabelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelName.Name = "LabelName";
-            this.LabelName.Size = new System.Drawing.Size(35, 17);
+            this.LabelName.Size = new System.Drawing.Size(29, 13);
             this.LabelName.TabIndex = 13;
             this.LabelName.Text = "Имя";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 63);
+            this.label1.Location = new System.Drawing.Point(2, 51);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 17);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 13;
             this.label1.Text = "Пол";
             // 
             // buttonAva
             // 
-            this.buttonAva.Location = new System.Drawing.Point(341, 27);
-            this.buttonAva.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAva.Location = new System.Drawing.Point(256, 22);
             this.buttonAva.Name = "buttonAva";
-            this.buttonAva.Size = new System.Drawing.Size(113, 62);
+            this.buttonAva.Size = new System.Drawing.Size(85, 50);
             this.buttonAva.TabIndex = 7;
             this.buttonAva.Text = "Загрузить свою аватарку";
             this.buttonAva.UseVisualStyleBackColor = true;
@@ -222,28 +214,27 @@
             this.panel2.Controls.Add(this.radioButtonFaro);
             this.panel2.Controls.Add(this.radioButtonArnes);
             this.panel2.Controls.Add(this.pictureBoxFraction);
-            this.panel2.Location = new System.Drawing.Point(0, 110);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(0, 89);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(469, 123);
+            this.panel2.Size = new System.Drawing.Size(352, 100);
             this.panel2.TabIndex = 14;
             // 
             // labelFraction
             // 
             this.labelFraction.AutoSize = true;
-            this.labelFraction.Location = new System.Drawing.Point(3, 25);
+            this.labelFraction.Location = new System.Drawing.Point(2, 20);
+            this.labelFraction.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFraction.Name = "labelFraction";
-            this.labelFraction.Size = new System.Drawing.Size(57, 17);
+            this.labelFraction.Size = new System.Drawing.Size(44, 13);
             this.labelFraction.TabIndex = 11;
             this.labelFraction.Text = "Родина";
             // 
             // radioButtonVesk
             // 
             this.radioButtonVesk.AutoSize = true;
-            this.radioButtonVesk.Location = new System.Drawing.Point(207, 80);
-            this.radioButtonVesk.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonVesk.Location = new System.Drawing.Point(155, 65);
             this.radioButtonVesk.Name = "radioButtonVesk";
-            this.radioButtonVesk.Size = new System.Drawing.Size(60, 21);
+            this.radioButtonVesk.Size = new System.Drawing.Size(50, 17);
             this.radioButtonVesk.TabIndex = 10;
             this.radioButtonVesk.TabStop = true;
             this.radioButtonVesk.Text = "Веск";
@@ -252,10 +243,9 @@
             // radioButtonFaro
             // 
             this.radioButtonFaro.AutoSize = true;
-            this.radioButtonFaro.Location = new System.Drawing.Point(207, 52);
-            this.radioButtonFaro.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonFaro.Location = new System.Drawing.Point(155, 42);
             this.radioButtonFaro.Name = "radioButtonFaro";
-            this.radioButtonFaro.Size = new System.Drawing.Size(66, 21);
+            this.radioButtonFaro.Size = new System.Drawing.Size(54, 17);
             this.radioButtonFaro.TabIndex = 9;
             this.radioButtonFaro.TabStop = true;
             this.radioButtonFaro.Text = "Фаро";
@@ -264,10 +254,9 @@
             // radioButtonArnes
             // 
             this.radioButtonArnes.AutoSize = true;
-            this.radioButtonArnes.Location = new System.Drawing.Point(207, 22);
-            this.radioButtonArnes.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonArnes.Location = new System.Drawing.Point(155, 18);
             this.radioButtonArnes.Name = "radioButtonArnes";
-            this.radioButtonArnes.Size = new System.Drawing.Size(69, 21);
+            this.radioButtonArnes.Size = new System.Drawing.Size(56, 17);
             this.radioButtonArnes.TabIndex = 8;
             this.radioButtonArnes.TabStop = true;
             this.radioButtonArnes.Text = "Арнес";
@@ -275,10 +264,9 @@
             // 
             // pictureBoxFraction
             // 
-            this.pictureBoxFraction.Location = new System.Drawing.Point(83, 6);
-            this.pictureBoxFraction.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxFraction.Location = new System.Drawing.Point(62, 5);
             this.pictureBoxFraction.Name = "pictureBoxFraction";
-            this.pictureBoxFraction.Size = new System.Drawing.Size(112, 110);
+            this.pictureBoxFraction.Size = new System.Drawing.Size(84, 89);
             this.pictureBoxFraction.TabIndex = 6;
             this.pictureBoxFraction.TabStop = false;
             // 
@@ -287,27 +275,26 @@
             this.panel3.Controls.Add(this.labelMagicSkills);
             this.panel3.Controls.Add(this.pictureBoxClassChar);
             this.panel3.Controls.Add(this.checkedListBoxCharClass);
-            this.panel3.Location = new System.Drawing.Point(0, 234);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(0, 190);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(475, 151);
+            this.panel3.Size = new System.Drawing.Size(356, 123);
             this.panel3.TabIndex = 15;
             // 
             // labelMagicSkills
             // 
             this.labelMagicSkills.AutoSize = true;
-            this.labelMagicSkills.Location = new System.Drawing.Point(3, 7);
+            this.labelMagicSkills.Location = new System.Drawing.Point(2, 6);
+            this.labelMagicSkills.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMagicSkills.Name = "labelMagicSkills";
-            this.labelMagicSkills.Size = new System.Drawing.Size(66, 17);
+            this.labelMagicSkills.Size = new System.Drawing.Size(51, 13);
             this.labelMagicSkills.TabIndex = 6;
             this.labelMagicSkills.Text = "Таланты";
             // 
             // pictureBoxClassChar
             // 
-            this.pictureBoxClassChar.Location = new System.Drawing.Point(83, 7);
-            this.pictureBoxClassChar.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxClassChar.Location = new System.Drawing.Point(62, 6);
             this.pictureBoxClassChar.Name = "pictureBoxClassChar";
-            this.pictureBoxClassChar.Size = new System.Drawing.Size(112, 117);
+            this.pictureBoxClassChar.Size = new System.Drawing.Size(84, 95);
             this.pictureBoxClassChar.TabIndex = 5;
             this.pictureBoxClassChar.TabStop = false;
             // 
@@ -321,18 +308,18 @@
             "Воздух",
             "Металл",
             "Антари"});
-            this.checkedListBoxCharClass.Location = new System.Drawing.Point(207, 4);
-            this.checkedListBoxCharClass.Margin = new System.Windows.Forms.Padding(4);
+            this.checkedListBoxCharClass.Location = new System.Drawing.Point(155, 3);
             this.checkedListBoxCharClass.Name = "checkedListBoxCharClass";
-            this.checkedListBoxCharClass.Size = new System.Drawing.Size(260, 106);
+            this.checkedListBoxCharClass.Size = new System.Drawing.Size(196, 79);
             this.checkedListBoxCharClass.TabIndex = 4;
             // 
             // labelPoints
             // 
             this.labelPoints.AutoSize = true;
-            this.labelPoints.Location = new System.Drawing.Point(3, 393);
+            this.labelPoints.Location = new System.Drawing.Point(2, 319);
+            this.labelPoints.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPoints.Name = "labelPoints";
-            this.labelPoints.Size = new System.Drawing.Size(70, 17);
+            this.labelPoints.Size = new System.Drawing.Size(54, 13);
             this.labelPoints.TabIndex = 16;
             this.labelPoints.Text = "Качества";
             // 
@@ -342,17 +329,17 @@
             this.panelChoose.BackgroundImage = global::ProjectArnes.Properties.Resources.Choosing;
             this.panelChoose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelChoose.Controls.Add(this.pictureBoxPoint);
-            this.panelChoose.Location = new System.Drawing.Point(12, 414);
-            this.panelChoose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelChoose.Location = new System.Drawing.Point(9, 336);
+            this.panelChoose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelChoose.Name = "panelChoose";
-            this.panelChoose.Size = new System.Drawing.Size(250, 250);
+            this.panelChoose.Size = new System.Drawing.Size(188, 203);
             this.panelChoose.TabIndex = 17;
             // 
             // CreateCharacterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 699);
+            this.ClientSize = new System.Drawing.Size(356, 568);
             this.Controls.Add(this.panelChoose);
             this.Controls.Add(this.labelPoints);
             this.Controls.Add(this.panel3);
@@ -363,7 +350,6 @@
             this.Controls.Add(this.labelMagic);
             this.Controls.Add(this.labelHP);
             this.Controls.Add(this.buttonCreate);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreateCharacterForm";
             this.Text = "Создание персонажа";
             this.Load += new System.EventHandler(this.CreateCharacterForm_Load);

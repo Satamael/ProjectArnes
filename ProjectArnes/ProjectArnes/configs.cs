@@ -7,12 +7,17 @@ namespace ProjectArnes
 {
     public class Configs
     {
-        public static string ThisUser;
-        public static string ThisUserEmail;
-        public static string ThisUserPromo;
-        public static string ThisUserPassword;
-        public static character ThisCharacter;
+        #region User; 
+        public static user ThisUser;
+
+        /// <summary>
+        /// Список пользователей
+        /// </summary>
         public static List<string> UsersData;
+        public static List<character> ThisUserCaracters;
+        public static bool logined;
+        #endregion
+
     }
  
 }

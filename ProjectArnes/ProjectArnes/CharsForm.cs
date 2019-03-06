@@ -18,8 +18,10 @@ namespace ProjectArnes
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             CreateCharacterForm c = new CreateCharacterForm();
             c.ShowDialog();
+            this.Visible = true;
 
         }
     }
