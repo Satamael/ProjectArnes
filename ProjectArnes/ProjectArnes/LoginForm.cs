@@ -41,7 +41,7 @@ namespace ProjectArnes
                     words[1] == textBoxPasswordInput.Text)
                 {
                     Configs.ThisUser.name = words[0];
-                    Configs.ThisUser.password = words[1]; //ДОПИЛИ СУКА
+                    Configs.ThisUser.password = words[1]; 
                     Configs.ThisUser.email = words[2];
                     Configs.ThisUser.promo = words[3];
                     Configs.logined = true;

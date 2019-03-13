@@ -181,9 +181,41 @@ namespace ProjectArnes
                 DannyeOPersonage += item+ ",";
             }
             DannyeOPersonage += "]";
-            DannyeOPersonage += ", Str=" + s.ToString() + ", Magic=" + m.ToString() + ", Dex=" + d.ToString() + ", Charakter=" + d.ToString(); 
+            DannyeOPersonage += ", Str=" + s.ToString() + ", Magic=" + m.ToString() + ", Dex=" + d.ToString() + ", Charakter=" + d.ToString();
+            DannyeOPersonage += "}";
+            MessageBox.Show(DannyeOPersonage);
+            string vybrLinia = "";
+            Configs.UsersData= System.IO.File.ReadAllLines("TableOne.csv").ToList();
+            int NambStrb =0;
+            int NeededStrb = 0;
+            foreach (string Line in Configs.UsersData)
+            {
+                
+                if (Line.StartsWith(Configs.ThisUser.name + ';' + Configs.ThisUser.password))
+                {
+                    vybrLinia = Line;
+                    NeededStrb = NambStrb;
+                    //Line += DannyeOPersonage;
+                }
+              
+                NambStrb++;
+                
+            }
+            Configs.UsersData[NeededStrb] +=','+ DannyeOPersonage;
+           
+            System.IO.File.Delete("TableOne.csv");
+            System.IO.File.WriteAllLines("TableOne.csv", Configs.UsersData, Encoding.UTF8);
 
-            MessageBox.Show(DannyeOPersonage + "}");
+            
+  
+            /*
+            Очищаешь весь файл
+                Бегаешь по конфиг.юзердате
+                    ФайлюАппендТекст
+                    Если нужная строка, то АппендКривой
+            */
+
+
 
 
         }

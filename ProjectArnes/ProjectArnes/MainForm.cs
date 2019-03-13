@@ -96,7 +96,12 @@ namespace ProjectArnes
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Configs.ThisUser.name = "";
+            Configs.ThisUser.password = "";
+            Configs.ThisUser.email = "";
+            Configs.ThisUser.promo = "";
+            Configs.logined = false;
+            MainForm_Load(sender,e);
         }
     }
 }
