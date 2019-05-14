@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PanelBackgraund = new System.Windows.Forms.Panel();
+            this.labelEnName = new System.Windows.Forms.Label();
             this.progressBarEmemyHP = new System.Windows.Forms.ProgressBar();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -46,6 +48,8 @@
             this.buttonEnter = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBoxEnPic = new System.Windows.Forms.PictureBox();
             this.PanelBackgraund.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -54,22 +58,35 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnPic)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelBackgraund
             // 
+            this.PanelBackgraund.Controls.Add(this.pictureBoxEnPic);
+            this.PanelBackgraund.Controls.Add(this.labelEnName);
             this.PanelBackgraund.Controls.Add(this.progressBarEmemyHP);
             this.PanelBackgraund.Controls.Add(this.panel1);
             this.PanelBackgraund.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelBackgraund.Location = new System.Drawing.Point(0, 0);
             this.PanelBackgraund.Name = "PanelBackgraund";
-            this.PanelBackgraund.Size = new System.Drawing.Size(791, 445);
+            this.PanelBackgraund.Size = new System.Drawing.Size(516, 387);
             this.PanelBackgraund.TabIndex = 0;
+            this.PanelBackgraund.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelBackgraund_Paint);
+            // 
+            // labelEnName
+            // 
+            this.labelEnName.AutoSize = true;
+            this.labelEnName.Location = new System.Drawing.Point(207, 39);
+            this.labelEnName.Name = "labelEnName";
+            this.labelEnName.Size = new System.Drawing.Size(35, 13);
+            this.labelEnName.TabIndex = 4;
+            this.labelEnName.Text = "label1";
             // 
             // progressBarEmemyHP
             // 
             this.progressBarEmemyHP.BackColor = System.Drawing.Color.DarkRed;
-            this.progressBarEmemyHP.Location = new System.Drawing.Point(506, 12);
+            this.progressBarEmemyHP.Location = new System.Drawing.Point(103, 12);
             this.progressBarEmemyHP.Name = "progressBarEmemyHP";
             this.progressBarEmemyHP.Size = new System.Drawing.Size(281, 24);
             this.progressBarEmemyHP.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -82,10 +99,11 @@
             this.panel1.Controls.Add(this.tableLayoutPanelSkills);
             this.panel1.Controls.Add(this.tabControlOutput);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 308);
+            this.panel1.Location = new System.Drawing.Point(0, 230);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(791, 137);
+            this.panel1.Size = new System.Drawing.Size(516, 157);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -93,7 +111,7 @@
             this.panel2.Controls.Add(this.progressBarMP);
             this.panel2.Controls.Add(this.pictureBoxCharPic);
             this.panel2.Controls.Add(this.progressBarHP);
-            this.panel2.Location = new System.Drawing.Point(330, 13);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(225, 112);
             this.panel2.TabIndex = 4;
@@ -144,13 +162,14 @@
             this.tableLayoutPanelSkills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanelSkills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanelSkills.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanelSkills.Location = new System.Drawing.Point(12, 101);
+            this.tableLayoutPanelSkills.Location = new System.Drawing.Point(3, 120);
             this.tableLayoutPanelSkills.Name = "tableLayoutPanelSkills";
             this.tableLayoutPanelSkills.RowCount = 1;
             this.tableLayoutPanelSkills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanelSkills.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanelSkills.Size = new System.Drawing.Size(300, 30);
             this.tableLayoutPanelSkills.TabIndex = 2;
+            this.tableLayoutPanelSkills.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanelSkills_Paint);
             // 
             // tabControlOutput
             // 
@@ -158,10 +177,10 @@
             this.tabControlOutput.Controls.Add(this.tabPage2);
             this.tabControlOutput.Controls.Add(this.tabPage3);
             this.tabControlOutput.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tabControlOutput.Location = new System.Drawing.Point(584, 0);
+            this.tabControlOutput.Location = new System.Drawing.Point(309, 0);
             this.tabControlOutput.Name = "tabControlOutput";
             this.tabControlOutput.SelectedIndex = 0;
-            this.tabControlOutput.Size = new System.Drawing.Size(207, 137);
+            this.tabControlOutput.Size = new System.Drawing.Size(207, 157);
             this.tabControlOutput.TabIndex = 1;
             // 
             // tabPage1
@@ -170,7 +189,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(199, 111);
+            this.tabPage1.Size = new System.Drawing.Size(199, 131);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Подсказки";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -181,7 +200,7 @@
             this.textBox3.Location = new System.Drawing.Point(3, 3);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(193, 105);
+            this.textBox3.Size = new System.Drawing.Size(193, 125);
             this.textBox3.TabIndex = 0;
             // 
             // tabPage2
@@ -190,7 +209,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(199, 111);
+            this.tabPage2.Size = new System.Drawing.Size(199, 131);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Журнал боя";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -201,7 +220,7 @@
             this.textBox4.Location = new System.Drawing.Point(3, 3);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(193, 105);
+            this.textBox4.Size = new System.Drawing.Size(193, 125);
             this.textBox4.TabIndex = 0;
             // 
             // tabPage3
@@ -212,7 +231,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(199, 111);
+            this.tabPage3.Size = new System.Drawing.Size(199, 131);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Чат";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -244,17 +263,32 @@
             this.textBox1.Size = new System.Drawing.Size(193, 70);
             this.textBox1.TabIndex = 0;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pictureBoxEnPic
+            // 
+            this.pictureBoxEnPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxEnPic.Location = new System.Drawing.Point(134, 58);
+            this.pictureBoxEnPic.Name = "pictureBoxEnPic";
+            this.pictureBoxEnPic.Size = new System.Drawing.Size(169, 169);
+            this.pictureBoxEnPic.TabIndex = 5;
+            this.pictureBoxEnPic.TabStop = false;
+            // 
             // GameplayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 445);
+            this.ClientSize = new System.Drawing.Size(516, 387);
             this.Controls.Add(this.PanelBackgraund);
             this.Name = "GameplayForm";
             this.Text = "GameplayForm";
             this.Load += new System.EventHandler(this.GameplayForm_Load);
             this.Resize += new System.EventHandler(this.GameplayForm_Resize);
             this.PanelBackgraund.ResumeLayout(false);
+            this.PanelBackgraund.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -266,6 +300,7 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnPic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,5 +325,8 @@
         private System.Windows.Forms.PictureBox pictureBoxCharPic;
         private System.Windows.Forms.ProgressBar progressBarHP;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelSkills;
+        private System.Windows.Forms.Label labelEnName;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBoxEnPic;
     }
 }

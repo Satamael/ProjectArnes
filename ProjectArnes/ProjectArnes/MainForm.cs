@@ -29,7 +29,11 @@ namespace ProjectArnes
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            if (Configs.logined == true)
+            List<String> SQLUsersRead = SQLClass.Select("Select * FROM Users");
+
+
+
+            if (Configs.logged == true)
             {
                 LabelThisLogined.Text = "Добро пожаловать, " + Configs.ThisUser.name;
                 menuStripVirtical.Visible = true;
@@ -37,14 +41,6 @@ namespace ProjectArnes
             }
             else { 
                 LabelThisLogined.Text = "Добро пожаловать, Гость";
-                /*UnloginToolStripMenuItem.Visible = false;
-                CharsToolStripMenuItem.Visible = false;
-                AchivToolStripMenuItem.Visible = false;
-                QestsToolStripMenuItem.Visible = false;
-                EventsToolStripMenuItem.Visible = false;
-                MultiplayerToolStripMenuItem.Visible = false;
-                SingleToolStripMenuItem.Visible = false;
-                */
                 menuStripVirtical.Visible = false;
 
 
@@ -100,8 +96,15 @@ namespace ProjectArnes
             Configs.ThisUser.password = "";
             Configs.ThisUser.email = "";
             Configs.ThisUser.promo = "";
-            Configs.logined = false;
+            Configs.logged = false;
             MainForm_Load(sender,e);
+        }
+
+        private void цистернаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            SkillShopForm ssf = new SkillShopForm();
+            ssf.ShowDialog();
         }
     }
 }

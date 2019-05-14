@@ -21,6 +21,12 @@ namespace ProjectArnes
         {
             InitializeComponent();
             pictureBoxPoint.AllowDrop = true;
+
+
+            if (Configs.ThisUser.promo == "ant" || Configs.ThisUser.promo == "andminBeta")
+            {
+                checkedListBoxCharClass.SetItemChecked(5, true);
+            }
         }
 
         private void buttonAva_Click(object sender, EventArgs e)
@@ -152,42 +158,56 @@ namespace ProjectArnes
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            String DannyeOPersonage = "{";
-            DannyeOPersonage += "Name = '" + textBoxName.Text + "'";
+            String DannyeOPersonage = "";
+            DannyeOPersonage += "Name = " + textBoxName.Text;
             if (radioButtonMale.Checked)
             {
-                DannyeOPersonage += ", Gender = mujik";
+                DannyeOPersonage += ", Gender = 1";
             }
             else
             {
-                DannyeOPersonage += ", Gender = telka";
+                DannyeOPersonage += ", Gender = 0";
             }
 
             if (radioButtonArnes.Checked)
             {
-                DannyeOPersonage += ", Motherboard = Arnes";
+                DannyeOPersonage += ", Homeland = Arnes";
             }
             else if (radioButtonFaro.Checked)
             {
-                DannyeOPersonage += ", Motherboard = Faro";
+                DannyeOPersonage += ", Homeland = Faro";
             }
             else if (radioButtonVesk.Checked)
             {
-                DannyeOPersonage += ", Matherboard = Vesk";
+                DannyeOPersonage += ", Homeland = Vesk";
             }
             DannyeOPersonage += ", Talants[";
             foreach (String item in checkedListBoxCharClass.CheckedItems)
             {
                 DannyeOPersonage += item+ ",";
             }
-            DannyeOPersonage += "]";
+            DannyeOPersonage += "Тело,+]";
             DannyeOPersonage += ", Str=" + s.ToString() + ", Magic=" + m.ToString() + ", Dex=" + d.ToString() + ", Charakter=" + d.ToString();
-            DannyeOPersonage += "}";
+            DannyeOPersonage += ", Pic=";
+            if (textBoxAvatar.Text != "" && textBoxAvatar.Text != "Ссылка на аватар")
+            {
+                
+                DannyeOPersonage += textBoxAvatar.Text;
+
+            }
+            else
+            {
+                DannyeOPersonage += "https://pbs.twimg.com/profile_images/1565063893/LogoSiluet_125x125_400x400.jpg";
+            }
+
             MessageBox.Show(DannyeOPersonage);
-            string vybrLinia = "";
-            Configs.UsersData= System.IO.File.ReadAllLines("TableOne.csv").ToList();
-            int NambStrb =0;
-            int NeededStrb = 0;
+            Configs.ThisUser.NChars++;
+            SQLClass.Update("UPDATE Users SET Character" + Configs.ThisUser.NChars.ToString() + "='" + DannyeOPersonage + "' WHERE Name = '" + Configs.ThisUser.name + "'");
+            this.Close();
+            /*string vybrLinia = "";
+            //Configs.UsersData= System.IO.File.ReadAllLines("TableOne.csv").ToList();
+            //int NambStrb =0;
+            //int NeededStrb = 0;
             foreach (string Line in Configs.UsersData)
             {
                 
@@ -200,24 +220,70 @@ namespace ProjectArnes
               
                 NambStrb++;
                 
-            }
-            Configs.UsersData[NeededStrb] +=','+ DannyeOPersonage;
+            }*/
+
+         //   SQLClass.Insert("INSERT INTO Users () VALUES ("",,)");
+            //Configs.UsersData[NeededStrb] +=','+ DannyeOPersonage;
            
-            System.IO.File.Delete("TableOne.csv");
-            System.IO.File.WriteAllLines("TableOne.csv", Configs.UsersData, Encoding.UTF8);
+           
 
             
   
-            /*
-            Очищаешь весь файл
-                Бегаешь по конфиг.юзердате
-                    ФайлюАппендТекст
-                    Если нужная строка, то АппендКривой
-            */
+        
 
 
 
 
+        }
+
+        private void radioButtonMale_CheckedChanged(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void checkedListBoxCharClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        public bool checked1 = false;
+
+        private void checkedListBoxCharClass_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (Configs.ThisUser.promo == "ant" || Configs.ThisUser.promo == "andminBeta")
+            {
+                if (e.Index == 5)
+                {
+                    e.NewValue = CheckState.Checked;
+                }
+            }
+
+            if (checkedListBoxCharClass.CheckedItems.Count >= 4 ||
+                checkedListBoxCharClass.CheckedItems.Count >= 3 && 
+                !(Configs.ThisUser.promo == "ant" || Configs.ThisUser.promo == "andminBeta")
+                )
+            {
+                //checkedListBoxCharClass.SetItemChecked(e.Index, false);
+                e.NewValue = CheckState.Unchecked;
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBoxAvatar_TextChanged(object sender, EventArgs e)
+        {
+            pictureBoxAvatar.ImageLocation = textBoxAvatar.Text;
+            CreateCharacterForm_Load(sender, e);
+
+
+        }
+
+        private void buttonAva_Click_1(object sender, EventArgs e)
+        {
+            pictureBoxAvatar.ImageLocation = textBoxAvatar.Text;
+            CreateCharacterForm_Load(sender, e);
         }
     }
 }

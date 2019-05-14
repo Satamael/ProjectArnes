@@ -13,11 +13,13 @@ namespace ProjectArnes
         /// <summary>
         /// Список пользователей
         /// </summary>
-        public static List<string> UsersData;
+        public static character ThisCharacter;
+       public static List<string> UsersData;
         public static List<character> ThisUserCaracters;
-        public static bool logined;
+        public static bool logged;
+        public static UserControlCharacter ThisUserControlChar;
         #endregion
-
+        
     }
  
 }

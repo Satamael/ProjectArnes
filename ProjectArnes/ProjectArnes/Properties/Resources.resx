@@ -118,13 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Arnes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Arnes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Choose" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Pics\Choose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Choosing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Pics\Choosing.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Faro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Faro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenderFM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Pics\GenderFM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GenderM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Pics\GenderM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="TableOne" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>TableOne.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="Vesk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vesk.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Вода" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Вода.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Воздух" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_862403152154155237509.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Земля" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Земля2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Кровь" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Кровь.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Огонь" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\огонь.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

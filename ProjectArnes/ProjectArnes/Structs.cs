@@ -11,7 +11,7 @@ namespace ProjectArnes
         string name;
         string tips;
         string school;
-        string anim;
+       List<Image> anim;
         string picChar;
         string picTarget;
         Image pic;
@@ -40,33 +40,33 @@ namespace ProjectArnes
 
     public struct character
     {
-        string name;
-        string fraction;
-        int XP;
-        List<Image> picPortret;
-        int HP;
-        int MP;
-        int CP;
-        int SP;
-        int DexP;
-        string classPers;
-        int DMG;
-        int Coins;
+        public string name;
+        public string fraction;
+        public bool male;
+        public List<Image> pics;
+        public int HP;
+        public int MP;
+        public int CP;
+        public int SP;
+        public int DexP;
+        public string Talants;
+        public int DMG;
+        
 
         public character(string str)
         {
             name = "";
+            male=true;
             fraction = "";
-            XP = 0;
-            picPortret = new List<Image>();
+            pics = new List<Image>();
             HP = 25;
             MP = 25;
             DexP = 25;
             CP = 25;
             SP = 3;
-            classPers = "";
+            Talants = "";
             DMG = 5;
-            Coins = 100;
+           
         }
     };
    
@@ -74,9 +74,12 @@ namespace ProjectArnes
     {
         public string name;
         public string password;
-        public string promo;
         public string email;
+        public string promo;
+        public int EXP;
+        public int Coins;
         public int donatCoins;
         public List<character> Chars;
+        public int NChars;
     }
 }

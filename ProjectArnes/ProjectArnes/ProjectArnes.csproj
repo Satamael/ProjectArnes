@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>.\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -62,6 +65,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SkillShopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkillShopForm.Designer.cs">
+      <DependentUpon>SkillShopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLClass.cs" />
     <Compile Include="Structs.cs" />
     <Compile Include="GameplayForm.cs">
       <SubType>Form</SubType>
@@ -89,6 +99,12 @@
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlCharacter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCharacter.Designer.cs">
+      <DependentUpon>UserControlCharacter.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CharsForm.resx">
       <DependentUpon>CharsForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -115,6 +131,12 @@
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SkillShopForm.resx">
+      <DependentUpon>SkillShopForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlCharacter.resx">
+      <DependentUpon>UserControlCharacter.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -131,6 +153,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Pics\Choosing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\GenderFM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pics\GenderM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arnes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Faro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vesk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_862403152154155237509.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Вода.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Земля2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\огонь.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Кровь.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
