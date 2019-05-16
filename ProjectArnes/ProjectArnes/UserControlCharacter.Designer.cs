@@ -84,6 +84,7 @@
             this.labelSTR.Size = new System.Drawing.Size(32, 13);
             this.labelSTR.TabIndex = 2;
             this.labelSTR.Text = "Сила";
+            this.labelSTR.Click += new System.EventHandler(this.labelSTR_Click);
             // 
             // labelMG
             // 
@@ -226,7 +227,6 @@
         private System.Windows.Forms.PictureBox pictureBoxAvatar;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelGender;
-        private System.Windows.Forms.Label labelSTR;
         private System.Windows.Forms.Label labelMG;
         private System.Windows.Forms.Label labelCR;
         private System.Windows.Forms.Label labelDEX;
@@ -238,5 +238,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelTalants;
         private System.Windows.Forms.Label labelHome;
         private System.Windows.Forms.Button buttonChoose;
+        public System.Windows.Forms.Label labelSTR;
     }
 }

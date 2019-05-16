@@ -187,5 +187,10 @@ namespace ProjectArnes
         {
             Configs.ThisUserControlChar = this;
         }
+
+        private void labelSTR_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

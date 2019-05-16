@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.PanelBackgraund = new System.Windows.Forms.Panel();
+            this.pictureBoxEnPic = new System.Windows.Forms.PictureBox();
             this.labelEnName = new System.Windows.Forms.Label();
             this.progressBarEmemyHP = new System.Windows.Forms.ProgressBar();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,8 +50,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBoxEnPic = new System.Windows.Forms.PictureBox();
             this.PanelBackgraund.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnPic)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCharPic)).BeginInit();
@@ -58,7 +59,6 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnPic)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelBackgraund
@@ -73,6 +73,15 @@
             this.PanelBackgraund.Size = new System.Drawing.Size(516, 387);
             this.PanelBackgraund.TabIndex = 0;
             this.PanelBackgraund.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelBackgraund_Paint);
+            // 
+            // pictureBoxEnPic
+            // 
+            this.pictureBoxEnPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxEnPic.Location = new System.Drawing.Point(134, 58);
+            this.pictureBoxEnPic.Name = "pictureBoxEnPic";
+            this.pictureBoxEnPic.Size = new System.Drawing.Size(169, 169);
+            this.pictureBoxEnPic.TabIndex = 5;
+            this.pictureBoxEnPic.TabStop = false;
             // 
             // labelEnName
             // 
@@ -197,6 +206,7 @@
             // textBox3
             // 
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(3, 3);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
@@ -217,6 +227,7 @@
             // textBox4
             // 
             this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(3, 3);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
@@ -268,15 +279,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBoxEnPic
-            // 
-            this.pictureBoxEnPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxEnPic.Location = new System.Drawing.Point(134, 58);
-            this.pictureBoxEnPic.Name = "pictureBoxEnPic";
-            this.pictureBoxEnPic.Size = new System.Drawing.Size(169, 169);
-            this.pictureBoxEnPic.TabIndex = 5;
-            this.pictureBoxEnPic.TabStop = false;
-            // 
             // GameplayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +291,7 @@
             this.Resize += new System.EventHandler(this.GameplayForm_Resize);
             this.PanelBackgraund.ResumeLayout(false);
             this.PanelBackgraund.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnPic)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -300,7 +303,6 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnPic)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -46,6 +46,7 @@ namespace ProjectArnes
                 p1.BackgroundImage = pn1.Image;
                 p1.BackgroundImageLayout = ImageLayout.Stretch;
                 p1.Click += new EventHandler(tableElement_Click);
+             
                 pn1.Click += new EventHandler(tableElement_Click);
 
                 Label l1 = new Label();

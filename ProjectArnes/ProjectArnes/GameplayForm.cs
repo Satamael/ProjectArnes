@@ -13,9 +13,14 @@ namespace ProjectArnes
     {
         int raund = 0;
         int enemyHP;
+        string txt;
+        string target;
+        int NomNod;
         public GameplayForm()
         {
             InitializeComponent();
+            
+            Configs.ThisCharacter.HP=100+ Convert.ToInt32(Configs.ThisUserControlChar.labelSTR.Text.Replace("Сила", ""));
             progressBarHP.Maximum = Configs.ThisCharacter.HP;
             progressBarHP.Value = Configs.ThisCharacter.HP;
         }
@@ -83,12 +88,16 @@ namespace ProjectArnes
                 pn1.Load(dannye[i + 1]);
                 p1.BackgroundImage = pn1.Image;
                 p1.BackgroundImageLayout = ImageLayout.Stretch;
+                p1.Click += new EventHandler(Hit_Click);
 
 
                 Label l1 = new Label();
                 l1.Text = dannye[i];
+                txt = l1.Text;
                 l1.Dock = DockStyle.Top;
                 l1.BackColor = Color.Transparent;
+                l1.Click += new EventHandler(Hit_Click);
+                pn1.Click += new EventHandler(Hit_Click);
 
 
                 p1.Controls.Add(l1);
@@ -102,6 +111,9 @@ namespace ProjectArnes
 
             enemyHP = Convert.ToInt32(EnemyList[1]);
 
+            progressBarEmemyHP.Maximum = enemyHP;
+            progressBarEmemyHP.Value = enemyHP;
+
 
 
 
@@ -110,6 +122,29 @@ namespace ProjectArnes
         private void timer1_Tick(object sender, EventArgs e)
         {
             progressBarHP.Value = Configs.ThisCharacter.HP;
+            if (NomNod % 2 == 0)
+            {
+                List<string> EnemyList = new List<string>(SQLClass.Select("SELECT * FROM Enemy LIMIT " + raund.ToString() + "," + '1'));
+                string talants = String.Join(",", EnemyList[3]);
+
+                string zapros = "Talant LIKE '@@@@@@@@'";
+                string[] tall = talants.Split(new char[] { ',' });
+                foreach (string line in tall)
+                {
+                    zapros += " OR Talant LIKE " + "'%" + line + "%' ";
+                }
+
+                List<String> enSkills = SQLClass.Select("SELECT * FROM Skills WHERE " + zapros);
+                Random rand = new Random();
+                int rnd = rand.Next(0, enSkills.Count / 8);
+                int vp = rnd;
+                int dmg = Convert.ToInt32(enSkills[(vp/8)+3]);
+                Configs.ThisCharacter.HP -= dmg;
+                progressBarHP.Value = Configs.ThisCharacter.HP;
+                
+                // List<string> click = new List<string>(SQLClass.Select("SELECT Tip,Name,Damage,CDtime,Cost,EXP FROM Skills WHERE Talant = '" + EnemyList[3] + "'"));
+                NomNod++;
+            }
         }
 
         private void tableLayoutPanelSkills_Paint(object sender, PaintEventArgs e)
@@ -127,12 +162,29 @@ namespace ProjectArnes
 
         }
 
-        private void Hit_Click(object sender, EventArgs e, string target)
-        {
+      
 
-            List<string> click = new List<string>(SQLClass.Select("SELECT Tip,Talant,Damage,CDtime,Cost,EXP FROM Skills WHERE Name = '" + txt + "'"));
-           e.
-            // tableLayoutPanelSkills
+        private void Hit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Panel p1 = (Panel)sender;
+            }
+            catch
+            {
+                Label p1 = (Label)sender;
+            }
+                List<string> click = new List<string>(SQLClass.Select("SELECT Tip,Talant,Damage,CDtime,Cost,EXP FROM Skills WHERE Name = '" + txt + "'"));
+            enemyHP -=Convert.ToInt32(click[2]);
+            progressBarMP.Value -= Convert.ToInt32(click[5]);
+            progressBarEmemyHP.Value = enemyHP;
+            NomNod++;
+            if (NomNod % 2 == 0)
+            {textBox4.Text = Configs.ThisCharacter.name + " нанёс противнику " + click[2] + " урона используя " + txt + Environment.NewLine;}
+         
+            
+
         }
     }
 }
+/**/
