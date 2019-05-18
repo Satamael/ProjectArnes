@@ -18,8 +18,9 @@ namespace ProjectArnes
         public static List<character> ThisUserCaracters;
         public static bool logged;
         public static UserControlCharacter ThisUserControlChar;
+        public static bool MP;
         #endregion
-        
+
     }
  
 }

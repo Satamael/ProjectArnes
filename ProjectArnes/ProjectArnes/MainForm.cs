@@ -6,6 +6,8 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Net;
+using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace ProjectArnes
@@ -105,6 +107,19 @@ namespace ProjectArnes
 
             SkillShopForm ssf = new SkillShopForm();
             ssf.ShowDialog();
+        }
+
+        private void заявкаНаBetaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BetaForm b = new BetaForm();
+            b.ShowDialog();
+
+        }
+
+        private void MultiplayerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MPlayerForm mpf = new MPlayerForm();
+            mpf.ShowDialog();
         }
     }
 }

@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BetaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BetaForm.Designer.cs">
+      <DependentUpon>BetaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CharsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,12 @@
     </Compile>
     <Compile Include="CreateCharacterForm.Designer.cs">
       <DependentUpon>CreateCharacterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MPlayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MPlayerForm.Designer.cs">
+      <DependentUpon>MPlayerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -105,6 +117,9 @@
     <Compile Include="UserControlCharacter.Designer.cs">
       <DependentUpon>UserControlCharacter.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BetaForm.resx">
+      <DependentUpon>BetaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CharsForm.resx">
       <DependentUpon>CharsForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -122,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MPlayerForm.resx">
+      <DependentUpon>MPlayerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
